@@ -10,7 +10,7 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.GH_PEPSI_APPS_ID }}
-          private_key: ${{ secrets.GH_PRIVATE_KEY }}
+          private-key: ${{ secrets.GH_PRIVATE_KEY }}
       - name: Use token
         env:
           TOKEN: ${{ steps.generate_token.outputs.token }}
